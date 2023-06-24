@@ -4,4 +4,4 @@ This project is a love letter to the game, and a attempt to bring cooperative ga
 
 # **[Contact]**
 [![Discord Banner 1](https://discordapp.com/api/guilds/1122266563622469672/widget.png?style=banner2)](https://discord.gg/n39FNnZAU3)
-https://discord.gg/n39FNnZAU3
+
