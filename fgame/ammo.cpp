@@ -61,158 +61,106 @@
 #include "ammo.h"
 #include "player.h"
 
-CLASS_DECLARATION( Item, AmmoEntity, NULL )
-	{
-		{ NULL, NULL }
-	};
+CLASS_DECLARATION(Item, AmmoEntity, NULL){
+	{ NULL, NULL }
+};
 
-AmmoEntity::AmmoEntity
-   (
-   )
-
-	{
-   if ( LoadingSavegame )
-      {
+AmmoEntity::AmmoEntity() {
+   if(LoadingSavegame) {
       // all data will be setup by the archive function
       return;
-      }
-   setName( "UnknownAmmo" );
-   amount       = 0;
-	}
+   }
 
-Item *AmmoEntity::ItemPickup
-   (
-   Entity *other, 
-	qboolean add_to_inventory
-   )
+   setName("UnknownAmmo");
+   amount = 0;
+}
 
-   {
+Item *AmmoEntity::ItemPickup(Entity *other, qboolean add_to_inventory) {
    Sentient *player;
 	str      realname;
 
-   if ( !other->isSubclassOf( Player ) )
+   if(!other->isSubclassOf(Player))
       return NULL;
 
-   player = ( Sentient * )other;
+   player = (Sentient*)other;
 
 	// Play pickup sound
    realname = GetRandomAlias( "snd_pickup" );
-   if ( realname.length() > 1 )
+   if(realname.length() > 1)
 		player->Sound( realname, CHAN_ITEM );
 
+
    // Cancel some events
-	CancelEventsOfType( EV_Item_DropToFloor );
-	CancelEventsOfType( EV_Item_Respawn );
-   CancelEventsOfType( EV_FadeOut );
+	CancelEventsOfType(EV_Item_DropToFloor);
+	CancelEventsOfType(EV_Item_Respawn);
+   CancelEventsOfType(EV_FadeOut);
 
    // Hide the model
-	setSolidType( SOLID_NOT );
+	setSolidType(SOLID_NOT);
 	hideModel();
 
    // Respawn?
-	if ( !Respawnable() )
-		PostEvent( EV_Remove, FRAMETIME );
+	if(!Respawnable())
+		PostEvent(EV_Remove, FRAMETIME);
    else 
-		PostEvent( EV_Item_Respawn, RespawnTime() );
+		PostEvent(EV_Item_Respawn, RespawnTime());
 
    // fire off any pickup_thread's 
-   if ( pickup_thread.length() )
-      {
+   if(pickup_thread.length()) {
       ExecuteThread( pickup_thread );
-      }
+   }
 
    // Give the ammo to the player
    player->GiveAmmo( item_name, amount );
    return NULL; // This doesn't create any items
-   }
+}
 
 
 // This is the Class that is used to keep track of ammo in the player's inventory.
 // It is not an entit, just a name and an amount.
+CLASS_DECLARATION(Class, Ammo, NULL){
+   {NULL, NULL}
+};
 
-CLASS_DECLARATION( Class, Ammo, NULL )
-   {
-      {NULL, NULL}
-   };
-
-Ammo::Ammo
-   (
-   )
-
-   {
-   if ( LoadingSavegame )
-      {
+Ammo::Ammo() {
+   if(LoadingSavegame) {
       // all data will be setup by the archive function
       return;
-      }
+   }
+
    setName( "UnknownAmmo" );
    setAmount( 0 );
    setMaxAmount( 100 );
-   }
+}
 
-void Ammo::setAmount
-   (
-   int a
-   )
-
-   {
+void Ammo::setAmount(int a){
    amount = a;
 
-   if ( ( maxamount > 0 ) && ( amount > maxamount ) )
+   if((maxamount > 0) && (amount > maxamount))
       amount = maxamount;
-   }
+}
 
-int Ammo::getAmount
-   (
-   void
-   )
-
-   {
+int Ammo::getAmount(void) {
    return amount;
-   }
+}
 
-void Ammo::setMaxAmount
-   (
-   int a
-   )
-
-   {
+void Ammo::setMaxAmount(int a) {
    maxamount = a;
-   }
+}
 
-int Ammo::getMaxAmount
-   (
-   void
-   )
-
-   {
+int Ammo::getMaxAmount(void){
    return maxamount;
-   }
+}
 
-void Ammo::setName
-   (
-   str n
-   )
-
-   {
+void Ammo::setName(str n) {
    name = n;
    name_index = gi.itemindex( name );
-   }
+}
 
-str Ammo::getName
-   (
-   void
-   )
-
-   {
+str Ammo::getName(void){
    return name;
-   }
+}
 
-int Ammo::getIndex
-   (
-   void
-   )
-
-   {
+int Ammo::getIndex(void){
    return name_index;
-   }
+}
