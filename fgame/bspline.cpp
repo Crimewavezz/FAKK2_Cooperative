@@ -67,7 +67,7 @@
 // 
 
 #include "g_local.h"
-#include "BSpline.h"
+#include "bspline.h"
 
 void BSpline::Set
 	(
