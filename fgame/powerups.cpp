@@ -105,14 +105,14 @@ Event EV_CircleOfProtection_Knockback
 
 CLASS_DECLARATION( InventoryItem, CircleOfProtection, "" )
    {
-      { &EV_InventoryItem_Use,                     Use },
-      { &EV_CircleOfProtection_Deactivate,         Deactivate },
-      { &EV_CircleOfProtection_DoDamage,           DoDamage },
-      { &EV_CircleOfProtection_MinRadius,          MinRadius },
-      { &EV_CircleOfProtection_MaxRadius,          MaxRadius },
-      { &EV_CircleOfProtection_Damage,             SetDamage },
-      { &EV_CircleOfProtection_DamageDelay,        DamageDelay },
-      { &EV_CircleOfProtection_Knockback,          Knockback },
+      { &EV_InventoryItem_Use,                     &Use },
+      { &EV_CircleOfProtection_Deactivate,         &Deactivate },
+      { &EV_CircleOfProtection_DoDamage,           &DoDamage },
+      { &EV_CircleOfProtection_MinRadius,          &MinRadius },
+      { &EV_CircleOfProtection_MaxRadius,          &MaxRadius },
+      { &EV_CircleOfProtection_Damage,             &SetDamage },
+      { &EV_CircleOfProtection_DamageDelay,        &DamageDelay },
+      { &EV_CircleOfProtection_Knockback,          &Knockback },
 	   { NULL, NULL }
    };
 

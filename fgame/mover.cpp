@@ -54,7 +54,7 @@
 
 CLASS_DECLARATION( Trigger, Mover, "mover" )
 	{
-	   { &EV_MoveDone,         MoveDone },
+	   { &EV_MoveDone,         &MoveDone },
 		{ NULL, NULL }
 	};
 

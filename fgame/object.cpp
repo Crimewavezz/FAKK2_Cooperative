@@ -113,10 +113,10 @@ Event EV_Object_Shootable
 
 CLASS_DECLARATION( Animate, Object, "object" )
 	{
-      { &EV_Killed,					      Killed },
-      { &EV_Object_Setup,              Setup },
-      { &EV_Object_SetAnim,            SetAnim },
-      { &EV_Object_Shootable,          MakeShootable },
+      { &EV_Killed,					      &Killed },
+      { &EV_Object_Setup,              &Setup },
+      { &EV_Object_SetAnim,            &SetAnim },
+      { &EV_Object_Shootable,          &MakeShootable },
 		{ NULL, NULL }
 	};
 
@@ -303,11 +303,11 @@ Event EV_ThrowObject_ThrowSound
 
 CLASS_DECLARATION( Object, ThrowObject, "func_throwobject" )
 	{
-      { &EV_Touch,					      Touch },
-      { &EV_ThrowObject_Pickup,	      Pickup },
-      { &EV_ThrowObject_Throw,	      Throw },
-      { &EV_ThrowObject_PickupOffset,	PickupOffset },
-      { &EV_ThrowObject_ThrowSound,	   ThrowSound },
+      { &EV_Touch,					      &Touch },
+      { &EV_ThrowObject_Pickup,	      &Pickup },
+      { &EV_ThrowObject_Throw,	      &Throw },
+      { &EV_ThrowObject_PickupOffset,	&PickupOffset },
+      { &EV_ThrowObject_ThrowSound,	   &ThrowSound },
 		{ NULL, NULL }
 	};
 
