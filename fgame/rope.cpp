@@ -59,9 +59,9 @@ Event EV_Rope_RopeShader
 
 CLASS_DECLARATION( ScriptSlave, Rope, "func_rope" )
 {
-   { &EV_Touch,             Touch },
-   { &EV_Rope_Setup,        Setup },
-   { &EV_Rope_Think,        RopeThink },
+   { &EV_Touch,             &Touch },
+   { &EV_Rope_Setup,        &Setup },
+   { &EV_Rope_Think,        &RopeThink },
    { NULL, NULL }
 };
 
@@ -747,13 +747,13 @@ Event EV_RopePiece_AttachModel
 
 CLASS_DECLARATION( ScriptSlave, RopePiece, "func_rope_piece" )
 {
-   { &EV_RopePiece_Setup,        Setup },
-   { &EV_Activate,               PieceTriggered },
-   { &EV_RopePiece_WiggleTime,   SetWiggleTime },
-   { &EV_RopePiece_WiggleMove,   SetWiggleMove },
-   { &EV_RopePiece_Damage,       SetDamage },
-   { &EV_RopePiece_Target2,      Target2 },
-   { &EV_RopePiece_AttachModel,  AttachModelToRope },
+   { &EV_RopePiece_Setup,        &Setup },
+   { &EV_Activate,               &PieceTriggered },
+   { &EV_RopePiece_WiggleTime,   &SetWiggleTime },
+   { &EV_RopePiece_WiggleMove,   &SetWiggleMove },
+   { &EV_RopePiece_Damage,       &SetDamage },
+   { &EV_RopePiece_Target2,      &Target2 },
+   { &EV_RopePiece_AttachModel,  &AttachModelToRope },
    { NULL, NULL }
 };
 
@@ -1065,13 +1065,13 @@ Event EV_RopeBase_RopeShader
 
 CLASS_DECLARATION(RopePiece, RopeBase, "func_rope_base")
    {
-      { &EV_RopeBase_Setup,            Setup },
-      { &EV_RopeBase_Stiffness,        SetStiffness },
-      { &EV_RopeBase_Strength,         SetStrength },
-      { &EV_RopeBase_PieceLength,      SetPieceLength },
-      { &EV_RopeBase_RopeDampener,     SetRopeDampener },
-      { &EV_RopeBase_RopeShader,       SetShader },
-      { &EV_Activate,                  Activate },
+      { &EV_RopeBase_Setup,            &Setup },
+      { &EV_RopeBase_Stiffness,        &SetStiffness },
+      { &EV_RopeBase_Strength,         &SetStrength },
+      { &EV_RopeBase_PieceLength,      &SetPieceLength },
+      { &EV_RopeBase_RopeDampener,     &SetRopeDampener },
+      { &EV_RopeBase_RopeShader,       &SetShader },
+      { &EV_Activate,                  &Activate },
       { NULL, NULL }
    };
 

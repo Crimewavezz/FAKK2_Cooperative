@@ -887,7 +887,7 @@ class Actor : public Sentient
 		void								FireProjectile( Event *ev );
 		void								FireBullet( Event *ev );
 		void								SaveAttack( Vector orig, Vector dir );
-		qboolean							TestAttack( str tag_name );
+		qboolean							TestAttack(str tag_name);
 		void								IncomingProjectile( Event *ev );
 		qboolean							EntityHasFireType( Entity *ent, firetype_t fire_type	);
 		void								DamageEnemy( Event *ev );

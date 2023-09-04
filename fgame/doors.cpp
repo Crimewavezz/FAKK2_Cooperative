@@ -313,29 +313,29 @@ Door.enemy chains from the master door through all doors linked in the chain.
 
 CLASS_DECLARATION( ScriptSlave, Door, "NormalDoor" )
 	{
-      { &EV_Door_StopSound,            SetStopSound },
-      { &EV_Door_MoveSound,            SetMoveSound },
-      { &EV_Door_MessageSound,         SetMessageSound },
-      { &EV_Door_LockedSound,          SetLockedSound },
-      { &EV_Door_SetWait,              SetWait },
-      { &EV_Door_SetDmg,               SetDmg },
-		{ &EV_Door_TriggerFieldTouched,  FieldTouched },
-	   { &EV_Trigger_Effect,			   TryOpen },
-	   { &EV_Activate,			         TryOpen },
-	   { &EV_Door_TryOpen,	            TryOpen },
-	   { &EV_Door_Close,		            Close },
-	   { &EV_Door_Open,		            Open },
-	   { &EV_Door_CloseEnd,	            CloseEnd },
-		{ &EV_Door_OpenEnd,	            OpenEnd },
-	   { &EV_Door_Fire,		            DoorFire },
-	   { &EV_Door_Link,		            LinkDoors },
-	   { &EV_Door_SetTime,	            SetTime },
-	   { &EV_Use,							   DoorUse },
-	   { &EV_Killed,						   DoorFire },
-	   { &EV_Blocked,						   DoorBlocked },
-	   { &EV_Door_Lock,		            LockDoor },
-	   { &EV_Door_Unlock,		         UnlockDoor },
-      { &EV_SetAngle,                  SetDir },
+      { &EV_Door_StopSound,            &SetStopSound },
+      { &EV_Door_MoveSound,            &SetMoveSound },
+      { &EV_Door_MessageSound,        &SetMessageSound },
+      { &EV_Door_LockedSound,          &SetLockedSound },
+      { &EV_Door_SetWait,              &SetWait },
+      { &EV_Door_SetDmg,               &SetDmg },
+		{ &EV_Door_TriggerFieldTouched,  &FieldTouched },
+	   { &EV_Trigger_Effect,			   &TryOpen },
+	   { &EV_Activate,			         &TryOpen },
+	   { &EV_Door_TryOpen,	            &TryOpen },
+	   { &EV_Door_Close,		            &Close },
+	   { &EV_Door_Open,		            &Open },
+	   { &EV_Door_CloseEnd,	            &CloseEnd },
+		{ &EV_Door_OpenEnd,	            &OpenEnd },
+	   { &EV_Door_Fire,		            &DoorFire },
+	   { &EV_Door_Link,		            &LinkDoors },
+	   { &EV_Door_SetTime,	            &SetTime },
+	   { &EV_Use,							   &DoorUse },
+	   { &EV_Killed,						   &DoorFire },
+	   { &EV_Blocked,						   &DoorBlocked },
+	   { &EV_Door_Lock,		            &LockDoor },
+	   { &EV_Door_Unlock,		         &UnlockDoor },
+      { &EV_SetAngle,                  &SetDir },
 	   { &EV_Touch,						   NULL },
 		{ NULL, NULL }
 	};
@@ -1276,9 +1276,9 @@ Event EV_RotatingDoor_OpenAngle
 
 CLASS_DECLARATION( Door, RotatingDoor, "func_rotatingdoor" )
 	{
-	   { &EV_Door_DoClose,		            DoClose },
-	   { &EV_Door_DoOpen,		            DoOpen },
-      { &EV_RotatingDoor_OpenAngle,       OpenAngle },
+	   { &EV_Door_DoClose,		            &DoClose },
+	   { &EV_Door_DoOpen,		            &DoOpen },
+      { &EV_RotatingDoor_OpenAngle,       &OpenAngle },
 		{ NULL, NULL }
 	};
 
@@ -1408,12 +1408,12 @@ Event EV_SlidingDoor_SetSpeed
 
 CLASS_DECLARATION( Door, SlidingDoor, "func_door" )
 	{
-	   { &EV_Door_DoClose,		            DoClose },
-	   { &EV_Door_DoOpen,		            DoOpen },
-      { &EV_SlidingDoor_Setup,            Setup },
-      { &EV_SlidingDoor_SetLip,           SetLip },
-      { &EV_SlidingDoor_SetSpeed,         SetSpeed },
-      { &EV_SetAngle,                     SetMoveDir },
+	   { &EV_Door_DoClose,		            &DoClose },
+	   { &EV_Door_DoOpen,		            &DoOpen },
+      { &EV_SlidingDoor_Setup,            &Setup },
+      { &EV_SlidingDoor_SetLip,           &SetLip },
+      { &EV_SlidingDoor_SetSpeed,        &SetSpeed },
+      { &EV_SetAngle,                     &SetMoveDir },
 		{ NULL, NULL }
 	};
 
@@ -1572,13 +1572,13 @@ Event EV_ScriptDoor_SetInitThread
 
 CLASS_DECLARATION( Door, ScriptDoor, "script_door" )
 	{
-	   { &EV_ScriptDoor_DoInit,		      DoInit },
-	   { &EV_Door_DoClose,		            DoClose },
-	   { &EV_Door_DoOpen,		            DoOpen },
-	   { &EV_ScriptDoor_SetInitThread,     SetInitThread },
-	   { &EV_ScriptDoor_SetOpenThread,     SetOpenThread },
-	   { &EV_ScriptDoor_SetCloseThread,    SetCloseThread },
-      { &EV_SetAngle,                     SetMoveDir },
+	   { &EV_ScriptDoor_DoInit,		      &DoInit },
+	   { &EV_Door_DoClose,		           &DoClose },
+	   { &EV_Door_DoOpen,		            &DoOpen },
+	   { &EV_ScriptDoor_SetInitThread,     &SetInitThread },
+	   { &EV_ScriptDoor_SetOpenThread,     &SetOpenThread },
+	   { &EV_ScriptDoor_SetCloseThread,    &SetCloseThread },
+      { &EV_SetAngle,                     &SetMoveDir },
 		{ NULL, NULL }
 	};
 

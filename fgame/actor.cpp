@@ -2269,235 +2269,235 @@ Event EV_Actor_AlwaysGiveWater
 
 CLASS_DECLARATION( Sentient, Actor, "monster_generic" )
 	{
-      { &EV_Activate,					   ActivateEvent },
-		{ &EV_Use,							   UseEvent },
+      { &EV_Activate,					   &ActivateEvent },
+		{ &EV_Use,							   &UseEvent },
                                        
-      { &EV_Actor_Sleep,				   Sleep },
-      { &EV_Actor_Wakeup,				   Wakeup },
+      { &EV_Actor_Sleep,				  &Sleep },
+      { &EV_Actor_Wakeup,				   &Wakeup },
                                        
-	   { &EV_Actor_Start,				   Start },
-	   { &EV_Pain,							   Pain },
-	   { &EV_Killed,						   Killed },
-		{ &EV_Actor_Dead,					   Dead },
-		{ &EV_Actor_Suicide,				   Suicide },
+	   { &EV_Actor_Start,				   &Start },
+	   { &EV_Pain,							   &Pain },
+	   { &EV_Killed,						   &Killed },
+		{ &EV_Actor_Dead,					   &Dead },
+		{ &EV_Actor_Suicide,				   &Suicide },
                                        
-      { &EV_Actor_ForwardSpeed,        ForwardSpeedEvent },
+      { &EV_Actor_ForwardSpeed,        &ForwardSpeedEvent },
                                        
-      { &EV_Actor_Fov,                 SetFov },
-      { &EV_Actor_VisionDistance,      SetVisionDistance },
+      { &EV_Actor_Fov,                 &SetFov },
+      { &EV_Actor_VisionDistance,      &SetVisionDistance },
 
-		{ &EV_Actor_Friend,				   FriendEvent },
-		{ &EV_Actor_Civilian,			   CivilianEvent },
-		{ &EV_Actor_Enemy,				   EnemyEvent },
-      { &EV_Actor_Monster,             MonsterEvent },
-      { &EV_Actor_Animal,              AnimalEvent },
-      { &EV_Actor_Inanimate,           InanimateEvent },
-		{ &EV_Actor_SetEnemyType,        SetEnemyType },
+		{ &EV_Actor_Friend,				   &FriendEvent },
+		{ &EV_Actor_Civilian,			   &CivilianEvent },
+		{ &EV_Actor_Enemy,				   &EnemyEvent },
+      { &EV_Actor_Monster,             &MonsterEvent },
+      { &EV_Actor_Animal,              &AnimalEvent },
+      { &EV_Actor_Inanimate,           &InanimateEvent },
+		{ &EV_Actor_SetEnemyType,        &SetEnemyType },
 	
-      { &EV_Actor_Swim,                SwimEvent },
-      { &EV_Actor_Fly,                 FlyEvent },
-      { &EV_Actor_NotLand,             NotLandEvent },
+      { &EV_Actor_Swim,                &SwimEvent },
+      { &EV_Actor_Fly,                 &FlyEvent },
+      { &EV_Actor_NotLand,             &NotLandEvent },
                                        
-		{ &EV_Actor_Thread,				   SetThread },
-		{ &EV_Actor_RunThread,			   RunThread },
-		{ &EV_Actor_EndThread,				EndThread },
+		{ &EV_Actor_Thread,				   &SetThread },
+		{ &EV_Actor_RunThread,			   &RunThread },
+		{ &EV_Actor_EndThread,				&EndThread },
 
-		{ &EV_Actor_Statemap,			   LoadStateMap },
+		{ &EV_Actor_Statemap,			   &LoadStateMap },
 
-		{ &EV_Actor_IfEnemyVisible,	   IfEnemyVisibleEvent },
-		{ &EV_Actor_IfNear,				   IfNearEvent },
-		{ &EV_Actor_Idle,					   IdleEvent },
-		{ &EV_Actor_LookAt,				   LookAt },
-		{ &EV_Actor_TurnTo,				   TurnToEvent },
-		{ &EV_Actor_HeadWatch,				HeadWatchEvent },
-		{ &EV_Actor_ResetHead,				ResetHeadEvent },
-		{ &EV_Actor_FinishedBehavior,	   FinishedBehavior },
-		{ &EV_Actor_NotifyBehavior,	   NotifyBehavior },
-		{ &EV_Actor_WalkTo,				   WalkTo },
-		{ &EV_Actor_WalkWatch,			   WalkWatch },
-		{ &EV_Actor_JumpTo,				   JumpToEvent },
-		{ &EV_Actor_RunTo,				   RunTo },
-		{ &EV_Actor_WarpTo,				   WarpTo },
-		{ &EV_Actor_Anim,					   Anim },
-		{ &EV_Actor_Attack,				   AttackEntity },
-      { &EV_Actor_AttackPlayer,        AttackPlayer },
-      { &EV_Actor_Remove,				   RemoveUselessBody },
+		{ &EV_Actor_IfEnemyVisible,	   &IfEnemyVisibleEvent },
+		{ &EV_Actor_IfNear,				   &IfNearEvent },
+		{ &EV_Actor_Idle,					   &IdleEvent },
+		{ &EV_Actor_LookAt,				   &LookAt },
+		{ &EV_Actor_TurnTo,				   &TurnToEvent },
+		{ &EV_Actor_HeadWatch,				&HeadWatchEvent },
+		{ &EV_Actor_ResetHead,				&ResetHeadEvent },
+		{ &EV_Actor_FinishedBehavior,	   &FinishedBehavior },
+		{ &EV_Actor_NotifyBehavior,	   &NotifyBehavior },
+		{ &EV_Actor_WalkTo,				   &WalkTo },
+		{ &EV_Actor_WalkWatch,			   &WalkWatch },
+		{ &EV_Actor_JumpTo,				   &JumpToEvent },
+		{ &EV_Actor_RunTo,				   &RunTo },
+		{ &EV_Actor_WarpTo,				   &WarpTo },
+		{ &EV_Actor_Anim,					   &Anim },
+		{ &EV_Actor_Attack,				   &AttackEntity },
+      { &EV_Actor_AttackPlayer,       &AttackPlayer },
+      { &EV_Actor_Remove,				   &RemoveUselessBody },
                                        
-		{ &EV_Actor_ReserveNode,		   ReserveNodeEvent },
-		{ &EV_Actor_ReleaseNode,		   ReleaseNodeEvent },
-		{ &EV_Actor_IfCanHideAt,		   IfCanHideAtEvent },
-      { &EV_Actor_IfEnemyWithin,       IfEnemyWithinEvent },
+		{ &EV_Actor_ReserveNode,		   &ReserveNodeEvent },
+		{ &EV_Actor_ReleaseNode,		   &ReleaseNodeEvent },
+		{ &EV_Actor_IfCanHideAt,		   &IfCanHideAtEvent },
+      { &EV_Actor_IfEnemyWithin,      &IfEnemyWithinEvent },
                                        
-		{ &EV_HeardSound,				      HeardSound },
+		{ &EV_HeardSound,				      &HeardSound },
 
-		{ &EV_Actor_Melee,		         MeleeEvent },
+		{ &EV_Actor_Melee,		         &MeleeEvent },
                                        
-      { &EV_Actor_PainThreshold,       SetPainThresholdEvent },
-      { &EV_Actor_SetKillThread,       SetKillThreadEvent },
-	   { &EV_SetHealth,			         SetHealth },
-		{ &EV_Actor_AddHealth,	         AddHealth },
-	   { &EV_Actor_EyePositionOffset,   EyeOffset },
-	   { &EV_Actor_DeathFade,				DeathFadeEvent },
-		{ &EV_Actor_DeathShrink,			DeathShrinkEvent },
-		{ &EV_Actor_DeathSink,				DeathSinkEvent },
-		{ &EV_Actor_StaySolid,				StaySolidEvent },
-	   { &EV_Actor_NoChatter,           NoChatterEvent },
-	   { &EV_Actor_TurnSpeed,           SetTurnSpeed },
-		{ &EV_Actor_WatchOffset,         SetWatchOffset },
+      { &EV_Actor_PainThreshold,       &SetPainThresholdEvent },
+      { &EV_Actor_SetKillThread,       &SetKillThreadEvent },
+	   { &EV_SetHealth,			         &SetHealth },
+		{ &EV_Actor_AddHealth,	         &AddHealth },
+	   { &EV_Actor_EyePositionOffset,   &EyeOffset },
+	   { &EV_Actor_DeathFade,				&DeathFadeEvent },
+		{ &EV_Actor_DeathShrink,			&DeathShrinkEvent },
+		{ &EV_Actor_DeathSink,				&DeathSinkEvent },
+		{ &EV_Actor_StaySolid,				&StaySolidEvent },
+	   { &EV_Actor_NoChatter,           &NoChatterEvent },
+	   { &EV_Actor_TurnSpeed,           &SetTurnSpeed },
+		{ &EV_Actor_WatchOffset,         &SetWatchOffset },
                                        
-      { &EV_ScriptThread_Goto,         GotoEvent },
+      { &EV_ScriptThread_Goto,         &GotoEvent },
 
-		{ &EV_Actor_SetMaxInactiveTime,	SetMaxInactiveTime },
+		{ &EV_Actor_SetMaxInactiveTime,	&SetMaxInactiveTime },
 
-		{ &EV_Anim_Done,					   AnimDone },
+		{ &EV_Anim_Done,					   &AnimDone },
 
-		{ &EV_Actor_ProjAttack,			   FireProjectile },
-		{ &EV_Actor_BulletAttack,			FireBullet },
+		{ &EV_Actor_ProjAttack,			   &FireProjectile },
+		{ &EV_Actor_BulletAttack,			&FireBullet },
 
-		{ &EV_Actor_Active,				   Active },
+		{ &EV_Actor_Active,				   &Active },
 
-		{ &EV_Actor_SpawnGib,				SpawnGib },
-		{ &EV_Actor_SpawnGibAtTag,			SpawnGibAtTag },
-		{ &EV_Actor_SpawnNamedGib,			SpawnNamedGib },
-		{ &EV_Actor_SpawnBlood,				SpawnBlood },
+		{ &EV_Actor_SpawnGib,				&SpawnGib },
+		{ &EV_Actor_SpawnGibAtTag,			&SpawnGibAtTag },
+		{ &EV_Actor_SpawnNamedGib,			&SpawnNamedGib },
+		{ &EV_Actor_SpawnBlood,				&SpawnBlood },
 
-		{ &EV_Actor_AIOn,						TurnAIOn },
-		{ &EV_Actor_AIOff,					TurnAIOff },
+		{ &EV_Actor_AIOn,						&TurnAIOn },
+		{ &EV_Actor_AIOff,					&TurnAIOff },
 
-		{ &EV_Actor_AIDeaf,					Deaf },
-		{ &EV_Actor_Deaf,						PermanentDeaf },
-		{ &EV_Actor_Blind,					PermanentBlind },
-		{ &EV_Actor_AIDumb,					Dumb },
+		{ &EV_Actor_AIDeaf,					&Deaf },
+		{ &EV_Actor_Deaf,						&PermanentDeaf },
+		{ &EV_Actor_Blind,					&PermanentBlind },
+		{ &EV_Actor_AIDumb,					&Dumb },
 
-		{ &EV_Actor_SetIdleThread,			SetIdleThread },
+		{ &EV_Actor_SetIdleThread,			&SetIdleThread },
 
-		{ &EV_ActorRegisterParts,			RegisterParts },
-		{ &EV_ActorRegisterSelf,			RegisterSelf },
-		{ &EV_ActorName,						Name },
-		{ &EV_ActorPartName,					PartName },
-		{ &EV_Actor_SendCommand,			SendCommand },
+		{ &EV_ActorRegisterParts,			&RegisterParts },
+		{ &EV_ActorRegisterSelf,			&RegisterSelf },
+		{ &EV_ActorName,						&Name },
+		{ &EV_ActorPartName,					&PartName },
+		{ &EV_Actor_SendCommand,			&SendCommand },
 
-		{ &EV_ActorSetupTriggerField,		SetupTriggerField },
-		{ &EV_ActorTriggerTouched,			TriggerTouched },
-		{ &EV_ActorOnlyShootable,			OnlyShootable },
+		{ &EV_ActorSetupTriggerField,		&SetupTriggerField },
+		{ &EV_ActorTriggerTouched,			&TriggerTouched },
+		{ &EV_ActorOnlyShootable,			&OnlyShootable },
 
-		{ &EV_ActorIncomingProjectile,	IncomingProjectile },
+		{ &EV_ActorIncomingProjectile,	&IncomingProjectile },
 
-		{ &EV_ActorSpawnActor,				SpawnActorAtTag },
-		{ &EV_ActorSpawnActorAtLocation,	SpawnActorAtLocation },
+		{ &EV_ActorSpawnActor,				&SpawnActorAtTag },
+		{ &EV_ActorSpawnActorAtLocation,	&SpawnActorAtLocation },
+			
+		{ &EV_Actor_AddDialog,          &AddDialog },
+		{ &EV_Actor_DialogDone,         &DialogDone },
+		{ &EV_Actor_PlayDialog,          &PlayDialog },
+		{ &EV_Actor_StopDialog,          &StopDialog },
+		{ &EV_Sentient_SetMouthAngle,		&SetMouthAngle },
 
-		{ &EV_Actor_AddDialog,           AddDialog },
-		{ &EV_Actor_DialogDone,          DialogDone },
-		{ &EV_Actor_PlayDialog,          PlayDialog },
-		{ &EV_Actor_StopDialog,          StopDialog },
-		{ &EV_Sentient_SetMouthAngle,		SetMouthAngle },
+		{ &EV_Actor_AllowTalk,				&AllowTalk },
+		{ &EV_Actor_AllowHangBack,			&AllowHangBack },
 
-		{ &EV_Actor_AllowTalk,				AllowTalk },
-		{ &EV_Actor_AllowHangBack,			AllowHangBack },
+		{ &EV_Actor_SolidMask,				&SolidMask },
+		{ &EV_Actor_IgnoreMonsterClip,	&IgnoreMonsterClip },
+		{ &EV_Actor_NotSolidMask,			&NotSolidMask },
+		{ &EV_Actor_NoMask,					&NoMask },
+		{ &EV_Actor_SetMask,					&SetMask },
 
-		{ &EV_Actor_SolidMask,				SolidMask },
-		{ &EV_Actor_IgnoreMonsterClip,	IgnoreMonsterClip },
-		{ &EV_Actor_NotSolidMask,			NotSolidMask },
-		{ &EV_Actor_NoMask,					NoMask },
-		{ &EV_Actor_SetMask,					SetMask },
+		{ &EV_Actor_PickupEnt,				&PickupEnt },
+		{ &EV_Actor_ThrowEnt,				&ThrowEnt },
 
-		{ &EV_Actor_PickupEnt,				PickupEnt },
-		{ &EV_Actor_ThrowEnt,				ThrowEnt },
+		{ &EV_Actor_Pickup,					&Pickup },
+		{ &EV_Actor_Throw,					&Throw },
 
-		{ &EV_Actor_Pickup,					Pickup },
-		{ &EV_Actor_Throw,					Throw },
+		{ &EV_Actor_DamageOnceStart,		&DamageOnceStart },
+		{ &EV_Actor_DamageOnceStop,		&DamageOnceStop },
 
-		{ &EV_Actor_DamageOnceStart,		DamageOnceStart },
-		{ &EV_Actor_DamageOnceStop,		DamageOnceStop },
+		{ &EV_Actor_GetNearestEnemy,		&GetNearestEnemy },
+		{ &EV_Actor_GetRandomEnemy,		&GetRandomEnemy },
+		{ &EV_Actor_DamageEnemy,			&DamageEnemy },
+		{ &EV_Actor_TurnTowardsEnemy,		&TurnTowardsEnemy },
 
-		{ &EV_Actor_GetNearestEnemy,		GetNearestEnemy },
-		{ &EV_Actor_GetRandomEnemy,		GetRandomEnemy },
-		{ &EV_Actor_DamageEnemy,			DamageEnemy },
-		{ &EV_Actor_TurnTowardsEnemy,		TurnTowardsEnemy },
+		{ &EV_Actor_GotoNextStage,			&GotoNextStage },
+		{ &EV_Actor_GotoPrevStage,			&GotoPrevStage },
+		{ &EV_Actor_GotoStage,				&GotoStage },
 
-		{ &EV_Actor_GotoNextStage,			GotoNextStage },
-		{ &EV_Actor_GotoPrevStage,			GotoPrevStage },
-		{ &EV_Actor_GotoStage,				GotoStage },
+		{ &EV_Actor_NotifyOthersAtDeath,	&NotifyOthersAtDeath },
 
-		{ &EV_Actor_NotifyOthersAtDeath,	NotifyOthersAtDeath },
+		{ &EV_Actor_SetBounceOff,			&SetBounceOff },
+		{ &EV_Actor_BounceOff,				&BounceOffEvent },
+		{ &EV_Actor_SetBounceOffEffect,	&SetBounceOffEffect },
 
-		{ &EV_Actor_SetBounceOff,			SetBounceOff },
-		{ &EV_Actor_BounceOff,				BounceOffEvent },
-		{ &EV_Actor_SetBounceOffEffect,	SetBounceOffEffect },
+		{ &EV_Actor_SetHaveThing,			&SetHaveThing },
 
-		{ &EV_Actor_SetHaveThing,			SetHaveThing },
+		{ &EV_Actor_SetUseGravity,			&SetUseGravity },
+		{ &EV_Actor_SetAllowFall,			&SetAllowFall },
 
-		{ &EV_Actor_SetUseGravity,			SetUseGravity },
-		{ &EV_Actor_SetAllowFall,			SetAllowFall },
+		{ &EV_Actor_SetDeathSize,			&SetDeathSize },
 
-		{ &EV_Actor_SetDeathSize,			SetDeathSize },
+		{ &EV_Actor_Fade,						&FadeEvent },
 
-		{ &EV_Actor_Fade,						FadeEvent },
+		{ &EV_Actor_AttackMode,				&AttackModeEvent },
 
-		{ &EV_Actor_AttackMode,				AttackModeEvent },
+		{ &EV_Stun,								&StunEvent },
 
-		{ &EV_Stun,								StunEvent },
+		{ &EV_Actor_AddSpawnItem,			&AddSpawnItem },
+		{ &EV_Actor_SetSpawnChance,		&SetSpawnChance },
+		{ &EV_Actor_ClearSpawnItems,		&ClearSpawnItems },
 
-		{ &EV_Actor_AddSpawnItem,			AddSpawnItem },
-		{ &EV_Actor_SetSpawnChance,		SetSpawnChance },
-		{ &EV_Actor_ClearSpawnItems,		ClearSpawnItems },
+		{ &EV_Actor_SetCanBeFinishedBy,	&SetCanBeFinishedBy },
 
-		{ &EV_Actor_SetCanBeFinishedBy,	SetCanBeFinishedBy },
+		{ &EV_Actor_SetFeetWidth,			&SetFeetWidth },
+		{ &EV_Actor_SetCanWalkOnOthers,	&SetCanWalkOnOthers },
 
-		{ &EV_Actor_SetFeetWidth,			SetFeetWidth },
-		{ &EV_Actor_SetCanWalkOnOthers,	SetCanWalkOnOthers },
+		{ &EV_Actor_Push,						&Push },
+		{ &EV_Actor_Pushable,				&Pushable },
 
-		{ &EV_Actor_Push,						Push },
-		{ &EV_Actor_Pushable,				Pushable },
+		{ &EV_Actor_ChargeWater,			&ChargeWater },
+		{ &EV_Actor_SetAttackableByActors,	&SetAttackableByActors },
+		{ &EV_Actor_SetAttackActors,		&SetAttackActors },
 
-		{ &EV_Actor_ChargeWater,			ChargeWater },
-		{ &EV_Actor_SetAttackableByActors,	SetAttackableByActors },
-		{ &EV_Actor_SetAttackActors,		SetAttackActors },
+		{ &EV_Actor_SetTargetable,			&SetTargetable },
 
-		{ &EV_Actor_SetTargetable,			SetTargetable },
+		{ &EV_Actor_ChangeType,				&ChangeType },
 
-		{ &EV_Actor_ChangeType,				ChangeType },
+		{ &EV_Actor_MinimumMeleeHeight,	&MinimumMeleeHeight },
+		{ &EV_Actor_SetDamageAngles,		&SetDamageAngles },
 
-		{ &EV_Actor_MinimumMeleeHeight,	MinimumMeleeHeight },
-		{ &EV_Actor_SetDamageAngles,		SetDamageAngles },
+		{ &EV_Actor_Immortal,				&SetImmortal },
 
-		{ &EV_Actor_Immortal,				SetImmortal },
+		{ &EV_Actor_HeadTwitch,				&HeadTwitch },
+		{ &EV_Actor_HeadTwitchEveryFrame, &HeadTwitchEveryFrame },
 
-		{ &EV_Actor_HeadTwitch,				HeadTwitch },
-		{ &EV_Actor_HeadTwitchEveryFrame, HeadTwitchEveryFrame },
+		{ &EV_Actor_SetDieCompletely,		&SetDieCompletely },
+		{ &EV_Actor_SetBleedAfterDeath,	&SetBleedAfterDeath },
 
-		{ &EV_Actor_SetDieCompletely,		SetDieCompletely },
-		{ &EV_Actor_SetBleedAfterDeath,	SetBleedAfterDeath },
+		{ &EV_Actor_IgnorePlacementWarning,	&IgnorePlacementWarning },
 
-		{ &EV_Actor_IgnorePlacementWarning,	IgnorePlacementWarning },
+		{ &EV_Actor_SetIdleStateName,		&SetIdleStateName },
+		
+		{ &EV_Actor_SetNotAllowedToKill,	&SetNotAllowedToKill },
 
-		{ &EV_Actor_SetIdleStateName,		SetIdleStateName },
+		{ &EV_Actor_TouchTriggers,			&TouchTriggers },
+		{ &EV_Actor_IgnoreWater,			&IgnoreWater },
+		{ &EV_Actor_NeverIgnoreSounds,	&NeverIgnoreSounds },
 
-		{ &EV_Actor_SetNotAllowedToKill,	SetNotAllowedToKill },
+		{ &EV_Actor_SimplePathfinding,	&SimplePathfinding },
 
-		{ &EV_Actor_TouchTriggers,			TouchTriggers },
-		{ &EV_Actor_IgnoreWater,			IgnoreWater },
-		{ &EV_Actor_NeverIgnoreSounds,	NeverIgnoreSounds },
+		{ &EV_Actor_NoPainSounds,			&NoPainSounds },
 
-		{ &EV_Actor_SimplePathfinding,	SimplePathfinding },
+		{ &EV_Actor_IncrementNumSpawns,	&IncrementNumSpawns },
+		{ &EV_Actor_DecrementNumSpawns,	&DecrementNumSpawns },
 
-		{ &EV_Actor_NoPainSounds,			NoPainSounds },
+		{ &EV_Actor_SetWaterLevel,			&SetWaterLevel },
 
-		{ &EV_Actor_IncrementNumSpawns,	IncrementNumSpawns },
-		{ &EV_Actor_DecrementNumSpawns,	DecrementNumSpawns },
+		{ &EV_Actor_UpdateBossHealth,		&UpdateBossHealth },
+		{ &EV_Actor_SetMaxBossHealth,		&SetMaxBossHealth },
 
-		{ &EV_Actor_SetWaterLevel,			SetWaterLevel },
+		{ &EV_Actor_IgnorePainFromActors,	&IgnorePainFromActors },
 
-		{ &EV_Actor_UpdateBossHealth,		UpdateBossHealth },
-		{ &EV_Actor_SetMaxBossHealth,		SetMaxBossHealth },
+		{ &EV_Actor_DamageAllowed,			&DamageAllowed },
 
-		{ &EV_Actor_IgnorePainFromActors,	IgnorePainFromActors },
+		{ &EV_Actor_AlwaysGiveWater,		&AlwaysGiveWater },
 
-		{ &EV_Actor_DamageAllowed,			DamageAllowed },
-
-		{ &EV_Actor_AlwaysGiveWater,		AlwaysGiveWater },
-
-		{ &EV_Touch,							Touched },
+		{ &EV_Touch,							&Touched },
 
 		{ NULL, NULL }
 	};
@@ -2746,35 +2746,32 @@ Actor::Actor()
 		PostEvent( EV_Actor_Start, EV_POSTSPAWN );
 	}
 
-Actor::~Actor()
-	{
-	if ( actorthread )
-		{
-		actorthread->ProcessEvent( EV_ScriptThread_End );
+Actor::~Actor() {
+	Actor *actor;
+	actor = this;
+
+	if(actorthread) {
+		actorthread->ProcessEvent(EV_ScriptThread_End);
 		actorthread = NULL;
-		}
+	}
 
-   if ( SleepList.ObjectInList( ( Actor * )this ) )
-      {
-      SleepList.RemoveObject( ( Actor * )this );
-      }
+   	if(SleepList.ObjectInList(actor)) {
+      	SleepList.RemoveObject(actor);
+    }
 
-   if ( ActiveList.ObjectInList( ( Actor * )this ) )
-      {
-      ActiveList.RemoveObject( ( Actor * )this );
-      }
+   	if(ActiveList.ObjectInList(actor)) {
+      	ActiveList.RemoveObject(actor);
+    }
 
-	if ( behavior )
-		{
+	if(behavior) {
 		delete behavior;
 		behavior = NULL;
-		}
+	}
 
-	if ( path )
-		{
+	if(path) {
 		delete path;
 		path = NULL;
-		}
+	}
 
    /* if ( trig )
       {
@@ -2783,131 +2780,112 @@ Actor::~Actor()
       } */
 
 	FreeDialogList();
+}
+
+void Actor::Sleep(void) {
+	Actor *actor;
+	actor = this;
+
+   	// inanimate actors don't target enemies
+   	if(actortype == IS_INANIMATE) { return; }
+
+   	if (!SleepList.ObjectInList(actor)) {
+	    SleepList.AddObject(actor);
+   	}
+
+	if(ActiveList.ObjectInList(actor)) {
+		ActiveList.RemoveObject(actor);
 	}
-
-void Actor::Sleep
-   (
-   void
-   )
-
-   {
-   // inanimate actors don't target enemies
-   if ( actortype == IS_INANIMATE )
-      {
-      return;
-      }
-
-   if ( !SleepList.ObjectInList( ( Actor * )this ) )
-      SleepList.AddObject( ( Actor * )this );
-
-	if ( ActiveList.ObjectInList( ( Actor * )this ) )
-      ActiveList.RemoveObject( ( Actor * )this );
-
-   currentEnemy = NULL;
-   flags &= ~FL_THINK;
+      
+   	currentEnemy = NULL;
+   	flags &= ~FL_THINK;
 	last_enemy_sight_time = 0;
-   }
+}
 
-void Actor::Sleep
-   (
-   Event *ev
-   )
-
-   {
+void Actor::Sleep(Event *ev) {
    Sleep();
-   }
+}
 
-void Actor::Wakeup
-   (
-   void
-   )
+void Actor::Wakeup(void) {
+	Actor *actor;
+	actor = this;
 
-   {
 	// See if already awake
-
-	if ( flags & FL_THINK && !LoadingSavegame )
+	if ( flags & FL_THINK && !LoadingSavegame ){
 		return;
-
+	}
+		
    // inanimate actors don't target enemies
-   if ( actortype == IS_INANIMATE )
-      {
-      return;
-      }
+   	if(actortype == IS_INANIMATE) {
+      	return;
+    }
 
-   if ( SleepList.ObjectInList( ( Actor * )this ) )
-      SleepList.RemoveObject( ( Actor * )this );
+   	if(SleepList.ObjectInList(actor)) {
+		SleepList.RemoveObject(actor);
+	}
+      
 
-	if ( !ActiveList.ObjectInList( ( Actor * )this ) )
-      ActiveList.AddObject( ( Actor * )this );
+	if(!ActiveList.ObjectInList(actor) ) {
+		ActiveList.AddObject(actor);
+	}
+      
+	flags |= FL_THINK;
+}
 
-   flags |= FL_THINK;
-   }
-
-void Actor::Wakeup
-   (
-   Event *ev
-   )
-
-   {
+void Actor::Wakeup(Event *ev) {
    Wakeup();
-   }
+}
 
-void Actor::Start
-	(
-	Event *ev
-	)
+void Actor::Start(Event *ev) {
+	Actor *actor;
+	actor = this;
 
-	{
 	trace_t	trace;
 	Vector	end;
-   Vector   start;
+   	Vector   start;
 	qboolean stuck;
 	str monster_name;
 
 	// Register with other parts of self if there are any
-
-	if ( target.length() > 0 )
+	if ( target.length() > 0 ){
 		PostEvent( EV_ActorRegisterSelf, FRAMETIME );
+	}
+		
 
 	// add them to the active list (they will be removed by sleep).
-   ActiveList.AddObject( ( Actor * )this );
+   	ActiveList.AddObject(actor);
 
 	// Drop actor to the ground
-
 	stuck = false;
-
-   start = origin + Vector( "0 0 1" );
-   end = origin;
+   	start = origin + Vector( "0 0 1" );
+   	end = origin;
 	end[ 2 ] -= 16;
 
 	trace = G_Trace( start, mins, maxs, end, this, MASK_SOLID, false, "Actor::start" );
 
-	if ( trace.startsolid || trace.allsolid )
-		{
+	if( trace.startsolid || trace.allsolid ) {
 		stuck = true;
-		}
-	else if ( !( flags & FL_FLY ) )
-		{
+	}
+	else if ( !( flags & FL_FLY ) ) {
 		setOrigin( trace.endpos );
 		groundentity = trace.ent;
-		}
+	}
 
-	if ( name.length() )
+	if ( name.length() ) {
 		monster_name = name;
-	else
+	}
+	else {
 		monster_name = getClassID();
-
-	if ( trace.fraction == 1 && movetype == MOVETYPE_STATIONARY && !GetActorFlag( ACTOR_FLAG_IGNORE_OFF_GROUND_WARNING ) )
-		{
+	}
+		
+	if ( trace.fraction == 1 && movetype == MOVETYPE_STATIONARY && !GetActorFlag( ACTOR_FLAG_IGNORE_OFF_GROUND_WARNING ) ) {
 		gi.DPrintf( "%s (%d) off of ground at '%5.1f %5.1f %5.1f'\n", monster_name.c_str(), entnum, origin.x, origin.y, origin.z );
-		}
+	}
 
-	if ( stuck && !GetActorFlag( ACTOR_FLAG_IGNORE_STUCK_WARNING ) )
-		{
+	if ( stuck && !GetActorFlag( ACTOR_FLAG_IGNORE_STUCK_WARNING ) ) {
 		groundentity = world->edict;
-
 		gi.DPrintf( "%s (%d) stuck in world at '%5.1f %5.1f %5.1f'\n", monster_name.c_str(), entnum, origin.x, origin.y, origin.z );
-		}
+	}
 
 	last_origin = origin;
 
@@ -2915,11 +2893,12 @@ void Actor::Start
 
 	last_ground_z = origin.z;
 
-	if ( !behavior || currentBehavior == "Idle" )
+	if ( !behavior || currentBehavior == "Idle" ) {
 		Sleep();
-
-	SetActorFlag( ACTOR_FLAG_STARTED, true );
 	}
+		
+	SetActorFlag( ACTOR_FLAG_STARTED, true );
+}
 
 //***********************************************************************************************
 //
@@ -3913,11 +3892,11 @@ void Actor::SetAttackableByActors
 	)
 
 	{
-	qboolean bool;
+	qboolean isAttackable;
 
-	bool = ev->GetBoolean( 1 );
+	isAttackable = ev->GetBoolean( 1 );
 
-	SetActorFlag( ACTOR_FLAG_ATTACKABLE_BY_ACTORS, bool );
+	SetActorFlag( ACTOR_FLAG_ATTACKABLE_BY_ACTORS, isAttackable );
 	}
 
 void Actor::SetAttackActors
@@ -3953,14 +3932,14 @@ void Actor::SetImmortal
    )
 
    {
-	qboolean bool;
+	qboolean isImmortal;
 
 	if ( ev->NumArgs() > 0 )
-		bool = ev->GetBoolean( 1 );
+		isImmortal = ev->GetBoolean( 1 );
 	else
-		bool = true;
+		isImmortal = true;
 
-	SetActorFlag( ACTOR_FLAG_IMMORTAL, bool );
+	SetActorFlag( ACTOR_FLAG_IMMORTAL, isImmortal );
 	}
 
 qboolean Actor::IsImmortal
@@ -9578,97 +9557,97 @@ qboolean Actor::returntrue
 
 Condition<Actor> Actor::Conditions[] =
    {
-      { "default",							returntrue },
-      { "INACTIVE",							checkinactive },
-      { "ANIM_DONE",							checkanimdone },
-      { "DEAD",								checkdead },
+      { "default",							&returntrue },
+      { "INACTIVE",							&checkinactive },
+      { "ANIM_DONE",							&checkanimdone },
+      { "DEAD",								&checkdead },
                                                             
-      { "HAVE_ENEMY",						checkhaveenemy },
-		{ "ENEMY_DEAD",						checkenemydead },
-		{ "ENEMY_NOCLIP",						checkenemynoclip },
-      { "CAN_SEE_ENEMY",					checkcanseeenemy },
-		{ "CAN_SHOOT_ENEMY",					checkcanshootenemy },
-		{ "ENEMY_IN_FOV",						checkenemyinfov },
-		{ "ENEMY_RELATIVE_YAW",				checkenemyrelativeyaw },
-		{ "ENEMY_IN_FOV",						checkenemyinfov },
-		{ "ENEMY_ON_GROUND",					checkenemyonground },
+      { "HAVE_ENEMY",						&checkhaveenemy },
+		{ "ENEMY_DEAD",						&checkenemydead },
+		{ "ENEMY_NOCLIP",						&checkenemynoclip },
+      { "CAN_SEE_ENEMY",					&checkcanseeenemy },
+		{ "CAN_SHOOT_ENEMY",					&checkcanshootenemy },
+		{ "ENEMY_IN_FOV",						&checkenemyinfov },
+		{ "ENEMY_RELATIVE_YAW",				&checkenemyrelativeyaw },
+		{ "ENEMY_IN_FOV",						&checkenemyinfov },
+		{ "ENEMY_ON_GROUND",					&checkenemyonground },
 
 
-      { "CAN_JUMP_TO_ENEMY",				checkcanjumptoenemy },
-		{ "CAN_FLY_TO_ENEMY",				checkcanflytoenemy },
+      { "CAN_JUMP_TO_ENEMY",				&checkcanjumptoenemy },
+		{ "CAN_FLY_TO_ENEMY",				&checkcanflytoenemy },
                                                             
-      { "PAIN",								checkinpain },
-		{ "SMALL_PAIN",						checksmallpain },
-		{ "PAIN_YAW",							checkpainyaw },
-		{ "PAIN_PITCH",						checkpainpitch },
+      { "PAIN",								&checkinpain },
+		{ "SMALL_PAIN",						&checksmallpain },
+		{ "PAIN_YAW",							&checkpainyaw },
+		{ "PAIN_PITCH",						&checkpainpitch },
 
-		{ "STUNNED",							checkstunned },
-		{ "FINISHED",							checkfinished },
+		{ "STUNNED",							&checkstunned },
+		{ "FINISHED",							&checkfinished },
 
-      { "MELEE_HIT",							checkmeleehit },
-		{ "BLOCKED_HIT",						checkblockedhit },
-		{ "BLOCKED",							checkblocked },
-		{ "OTHER_DIED",						checkotherdied },
-		{ "STUCK",								checkstuck },
-		{ "NO_PATH",							checknopath },
+      { "MELEE_HIT",							&checkmeleehit },
+		{ "BLOCKED_HIT",						&checkblockedhit },
+		{ "BLOCKED",							&checkblocked },
+		{ "OTHER_DIED",						&checkotherdied },
+		{ "STUCK",								&checkstuck },
+		{ "NO_PATH",							&checknopath },
 
-		{ "ON_FIRE",							checkonfire },
+		{ "ON_FIRE",							&checkonfire },
                                                             
-      { "BEHAVIOR_DONE",					checkbehaviordone },
-      { "TIME_DONE",							checktimedone },
-      { "DONE",								checkdone },
+      { "BEHAVIOR_DONE",					&checkbehaviordone },
+      { "TIME_DONE",							&checktimedone },
+      { "DONE",								&checkdone },
                                                             
-      { "RANGE",								checkenemyrange },
-		{ "PLAYER_RANGE",						checkplayerrange },
-      { "CHANCE",								checkchance },
-      { "MOVING_ACTOR_RANGE",				checkmovingactorrange },
-      { "STATE_TIME",						checkstatetime },
-      { "TIMES_DONE",						checktimesdone },
+      { "RANGE",								&checkenemyrange },
+		{ "PLAYER_RANGE",						&checkplayerrange },
+      { "CHANCE",								&checkchance },
+      { "MOVING_ACTOR_RANGE",				&checkmovingactorrange },
+      { "STATE_TIME",						&checkstatetime },
+      { "TIMES_DONE",						&checktimesdone },
                                                             
-      { "MOD",									checkmeansofdeath },
+      { "MOD",									&checkmeansofdeath },
                                                             
-      { "NOISE_HEARD",						checknoiseheard },
+      { "NOISE_HEARD",						&checknoiseheard },
                                                             
-      { "PART_STATE",						checkpartstate },
-      { "PART_DEAD",							checkpartdead },
-      { "PART_FLAG",							checkpartflag },
+      { "PART_STATE",						&checkpartstate },
+      { "PART_DEAD",							&checkpartdead },
+      { "PART_FLAG",							&checkpartflag },
 
-		{ "NUM_SPAWNS",						checknumspawns },
+		{ "NUM_SPAWNS",						&checknumspawns },
                                                             
-      { "COMMAND",							checkcommand },
+      { "COMMAND",							&checkcommand },
                                                             
-      { "TOUCHED",							checktouched },
+      { "TOUCHED",							&checktouched },
                                                             
-      { "ACTIVATED",							checkactivated },
-      { "USED",								checkused },
-      { "TWITCH",								checktwitch },
+      { "ACTIVATED",							&checkactivated },
+      { "USED",								&checkused },
+      { "TWITCH",								&checktwitch },
                                                             
-      { "HEALTH",								checkhealth },
+      { "HEALTH",								&checkhealth },
                                                             
-      { "ON_GROUND",							checkonground },
-		{ "IN_WATER",							checkinwater },
+      { "ON_GROUND",							&checkonground },
+		{ "IN_WATER",							&checkinwater },
 
-      { "INCOMING_MELEE_ATTACK",			checkincomingmeleeattack },
-      { "INCOMING_PROJECTILE",			checkincomingprojectile },
+      { "INCOMING_MELEE_ATTACK",			&checkincomingmeleeattack },
+      { "INCOMING_PROJECTILE",			&checkincomingprojectile },
 
-		{ "ENEMY_STUNNED",					checkenemystunned },
+		{ "ENEMY_STUNNED",					&checkenemystunned },
 
-      { "ENEMY_IN_PATH",					checkenemyinpath },
+      { "ENEMY_IN_PATH",					&checkenemyinpath },
 
-      { "STAGE",								checkstage },
+      { "STAGE",								&checkstage },
 
-		{ "HELD",								checkheld },
+		{ "HELD",								&checkheld },
 
-		{ "ENEMY_HAS_MELEE",					checkenemymelee },
-		{ "ENEMY_HAS_RANGED",				checkenemyranged },
-		{ "ENEMY_HAS_SHIELD",				checkenemyshield },
+		{ "ENEMY_HAS_MELEE",					&checkenemymelee },
+		{ "ENEMY_HAS_RANGED",				&checkenemyranged },
+		{ "ENEMY_HAS_SHIELD",				&checkenemyshield },
 
-		{ "HAS_THING",							checkhasthing },
+		{ "HAS_THING",							&checkhasthing },
 
-		{ "ALLOW_HANGBACK",					checkallowhangback },
+		{ "ALLOW_HANGBACK",					&checkallowhangback },
 
-		{ "NAME",								checkname },
-		{ "ANIM_NAME",							checkanimname },
+		{ "NAME",								&checkname },
+		{ "ANIM_NAME",							&checkanimname },
 
       { NULL,									NULL },
    };
@@ -9691,7 +9670,7 @@ Event	EV_SpinningPlant_GetClip
 
 CLASS_DECLARATION( Actor, SpinningPlant, NULL )
 	{
-		{ &EV_SpinningPlant_GetClip,			   GetClip },
+		{ &EV_SpinningPlant_GetClip,			   &GetClip },
       { NULL, NULL }
    };
 
@@ -10854,11 +10833,11 @@ void Actor::SetTargetable
    )
 
 	{
-	qboolean bool;
+	qboolean isTargetable;
 
-	bool = ev->GetBoolean( 1 );
+	isTargetable = ev->GetBoolean( 1 );
 
-	SetActorFlag( ACTOR_FLAG_TARGETABLE, bool );
+	SetActorFlag( ACTOR_FLAG_TARGETABLE, isTargetable);
 	}
 
 qboolean Actor::CanTarget
@@ -11751,7 +11730,8 @@ void Actor::Think
 	)
 
 	{
-
+		Actor *actor;
+		actor = this;
 	// Update boss health if necessary
 
 	if ( GetActorFlag( ACTOR_FLAG_UPDATE_BOSS_HEALTH ) && max_boss_health && mode == ACTOR_MODE_AI )
@@ -11900,7 +11880,7 @@ void Actor::Think
 				EndBehavior();
 
 				// remove them from the active list
-				ActiveList.RemoveObject( ( Actor * )this );
+				ActiveList.RemoveObject(actor);
 				}
 			return;
 			}
