@@ -1,0 +1,542 @@
+inv_vert_offset 96
+inv_horiz_offset 0
+inv_height       64
+inv_width        64
+inv_align        right
+inv_cascade      left
+inv_selectsound  snd_inv_select
+inv_rejectsound  snd_inv_reject
+inv_changesound  snd_inv_change
+//bgcolor 0 0 0 0
+
+typedef swords
+{
+button_shader textures/inv/inv_swords
+hover_shader textures/inv/inv_swords_selected
+sel_shader textures/inv/inv_swords_selected_2
+width 64
+height 64
+
+item "GreenSword"
+bgshader textures/inv/inv_widget_top
+equip right
+model models/weapon_sword.tik
+move bob // bob or spin
+angledeltas "0 30 0" // angles to bob or spin
+angles "0 40 -25"
+offset "-65 0 16"
+hudmove bob // bob or spin
+hudangledeltas "0 30 0" // angles to bob or spin
+//hudangles "0 0 20"
+//hudoffset "0 10 0"
+hudangles "0 40 -25"
+hudoffset "-64 0 16"
+selitem_shader textures/inv/inv_widget_top_selected
+selitem_shaderontop
+modelwindow 0.1 0.1 0.8 0.8
+
+item "FireSword"
+bgshader textures/inv/inv_widget_middle
+equip right
+model models/weapon_firesword.tik
+move bob // bob or spin
+angledeltas "0 30 0" // angles to bob or spin
+angles "0 40 -25"
+offset "-65 0 16"
+hudmove bob // bob or spin
+hudangledeltas "0 30 0" // angles to bob or spin
+hudangles "0 40 -25"
+hudoffset "-64 0 16"
+selitem_shader textures/inv/inv_widget_middle_selected
+modelwindow 0.1 0.1 0.8 0.8
+selitem_shaderontop
+
+item "ElecSword"
+bgshader textures/inv/inv_widget_middle
+equip right
+model models/weapon_elecsword.tik
+move bob // bob or spin
+angledeltas "0 30 0" // angles to bob or spin
+angles "0 40 -25"
+offset "-65 0 16"
+hudmove bob // bob or spin
+hudangledeltas "0 30 0" // angles to bob or spin
+hudangles "0 40 -25"
+hudoffset "-64 0 16"
+selitem_shader textures/inv/inv_widget_middle_selected
+modelwindow 0.1 0.1 0.8 0.8
+selitem_shaderontop
+
+item "ChainSword"
+ammo "Gas"
+bgshader textures/inv/inv_widget_middle
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+equip dual
+model models/weapon_chainsword.tik
+move bob // bob or spin
+angledeltas "0 5 0" // angles to bob or spin
+angles "90 50 20"
+offset "-110 0 28"
+hudmove bob // bob or spin
+hudangledeltas "0 5 0" // angles to bob or spin
+hudangles "90 10 60"
+hudoffset "-85 2 28"
+selitem_shader textures/inv/inv_widget_middle_selected
+modelwindow 0.2 0.2 .65 0.6
+selitem_shaderontop
+
+item "Axe"
+bgshader textures/inv/inv_widget_bottom
+equip dual
+model models/weapon_axe.tik
+move bob // bob or spin
+angledeltas "2 0 0" // angles to bob or spin
+angles "20 80 -55"
+offset "-80 -24 0"
+hudmove bob // bob or spin
+hudangledeltas "2 0 0" // angles to bob or spin
+hudangles "90 10 60"
+hudoffset "-50 10 28"
+selitem_shader textures/inv/inv_widget_bottom_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "LightSword"
+bgshader textures/inv/inv_widget_bottom
+equip dual
+model models/weapon_lightsword.tik
+move bob // bob or spin
+angledeltas "0 30 0" // angles to bob or spin
+angles "0 40 -25"
+offset "-65 0 16"
+hudmove bob // bob or spin
+hudangledeltas "0 30 0" // angles to bob or spin
+hudangles "0 40 -25"
+hudoffset "-64 0 16"
+selitem_shader textures/inv/inv_widget_bottom_selected
+selitem_shaderontop
+modelwindow 0.1 0.1 0.8 0.8
+
+}
+
+// weapon_twouzis.tik
+
+typedef defense
+{
+button_shader textures/inv/inv_defense
+hover_shader textures/inv/inv_defense_selected
+sel_shader textures/inv/inv_defense_selected_2
+
+width 64
+height 64
+
+item "Sling"
+bgshader textures/inv/inv_widget_top
+equip dual
+model models/inv_slingrock.tik
+anim idle
+move spin
+angledeltas "0 30 0"
+hudmove spin
+hudangledeltas "0 30 0"
+hudoffset "20 0 0"
+selitem_shader textures/inv/inv_widget_top_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "GasSling"
+ammo "Gas Pod"
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+bgshader textures/inv/inv_widget_middle
+equip dual
+model models/inv_slingpod.tik
+anim idle
+move spin
+angledeltas "0 30 0"
+hudmove spin
+hudangledeltas "0 30 0"
+hudoffset "20 0 0"
+selitem_shader textures/inv/inv_widget_middle_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "AsteroidSling"
+ammo "Asteroid"
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+bgshader textures/inv/inv_widget_middle
+equip dual
+model models/inv_slingmeteor.tik
+anim idle
+move spin
+angledeltas "0 30 0"
+hudmove spin
+hudangledeltas "0 30 0"
+hudoffset "20 0 0"
+selitem_shader textures/inv/inv_widget_middle_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "Smallshield"
+bgshader textures/inv/inv_widget_middle
+equip left
+model models/weapon_smallshield.tik
+move spin
+hudmove spin
+angledeltas "0 30 0"
+offset "0 -2 2"
+hudoffset "10 0 0"
+hudangledeltas "0 30 0"
+selitem_shader textures/inv/inv_widget_middle_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "Largeshield"
+bgshader textures/inv/inv_widget_bottom
+equip left
+model models/weapon_largeshield.tik
+move spin
+hudmove spin
+angles "0 180 0"
+angledeltas "0 30 0"
+offset "30 -3 0"
+hudoffset "30 -3 0"
+hudangles "0 180 0"
+hudangledeltas "0 30 0"
+selitem_shader textures/inv/inv_widget_bottom_selected
+selitem_shaderontop
+}
+
+typedef guns
+{
+button_shader textures/inv/inv_smallarms
+hover_shader textures/inv/inv_smallarms_selected
+sel_shader textures/inv/inv_smallarms_selected_2
+
+width 64
+height 64
+
+item "Crossbow"
+ammo "Plasma"
+bgshader textures/inv/inv_widget_top
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+equip left right
+model models/weapon_cbow.tik
+move bob
+angledeltas "0 10 0"
+rotateoffset "-10 0 0"
+angles "200 20 180"
+offset "-30 0 -2"
+hudmove bob
+hudangledeltas "0 10 0"
+hudrotateoffset "-10 0 0"
+hudangles "200 20 180"
+hudoffset "-30 0 -2"
+selitem_shader textures/inv/inv_widget_top_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "Uzi"
+bgshader textures/inv/inv_widget_middle
+ammo "Bullet"
+equip left right
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+model models/weapon_uzi.tik
+move bob
+angles "0 230 0"
+offset "0 5 -3"
+angledeltas "0 20 0"
+hudmove bob
+hudangles "0 230 0"
+hudoffset "0 5 -3"
+hudangledeltas "0 20 0"
+selitem_shader textures/inv/inv_widget_middle_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "DualUzi"
+bgshader textures/inv/inv_widget_middle
+ammo "Bullet"
+command "dualwield Uzi DualUzi"
+equip left right
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+model models/weapon_2uzis.tik
+hudmodel models/weapon_dualuzi.tik
+move bob
+angles "0 230 0"
+offset "0 5 -3"
+angledeltas "0 5 0"
+hudmove bob
+hudangles "0 140 0"
+hudoffset "0 -5 -3"
+hudangledeltas "0 -20 0"
+selitem_shader textures/inv/inv_widget_middle_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "HandGun"
+ammo "Bullet"
+bgshader textures/inv/inv_widget_bottom
+equip left right
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+model models/weapon_gun.tik
+move bob
+angles "0 90 0"
+offset "0 -6 2"
+angledeltas "0 30 0"
+hudmove bob
+hudangles "0 90 0"
+hudoffset "8 -5 1"
+hudangledeltas "0 30 0"
+selitem_shader textures/inv/inv_widget_bottom_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+}
+
+typedef explosives
+{
+button_shader textures/inv/inv_explosives
+hover_shader textures/inv/inv_explosives_selected
+sel_shader textures/inv/inv_explosives_selected_2
+
+width 64
+height 64
+
+item "Flashbang"
+ammo "Flashbangs"
+checkammo 1
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+bgshader textures/inv/inv_widget_top
+equip left right
+model models/weapon_flashbang.tik
+move bob 
+angledeltas "0 10 0"
+angles "0 180 0"
+offset "-5 -2 3"
+hudmove bob
+hudangledeltas "0 5 0"
+hudangles "0 160 0"
+hudoffset "5 0 5"
+selitem_shader textures/inv/inv_widget_top_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "Rocket_Launcher"
+ammo "Rocket"
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+bgshader textures/inv/inv_widget_bottom
+equip dual
+model models/weapon_rlauncher.tik
+move bob
+angledeltas "0 10 0"
+angles "0 200 0"
+offset "-80 0 0"
+hudmove bob
+hudangledeltas "0 5 0"
+hudangles "0 140 0"
+hudoffset "-20 10 0"
+selitem_shader textures/inv/inv_widget_bottom_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+}
+
+typedef bigguns
+{
+button_shader textures/inv/inv_bigguns
+hover_shader textures/inv/inv_bigguns_selected
+sel_shader textures/inv/inv_bigguns_selected_2
+
+width 64
+height 64
+
+item "Shotgun"
+ammo "Plasma"
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+bgshader textures/inv/inv_widget_top
+equip dual
+model models/weapon_shotgun.tik
+move bob
+angledeltas "0 5 0"
+angles "0 160 0"
+offset "5 -10 0"
+hudmove bob
+hudangledeltas "0 5 0"
+hudangles "0 90 0"
+hudoffset "-5 -20 0"
+selitem_shader textures/inv/inv_widget_top_selected
+selitem_shaderontop
+
+item "Chaingun"
+ammo "Bullet"
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+bgshader textures/inv/inv_widget_middle
+equip dual
+model models/weapon_chaingun.tik
+move bob
+angledeltas "0 5 0"
+angles "-10 165 0"
+offset "-45 -14 -8"
+hudmove bob
+hudangledeltas "0 1 0"
+hudangles "0 145 0"
+hudoffset "-5 -25 0"
+selitem_shader textures/inv/inv_widget_middle_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "Flamethrower"
+ammo "Gas"
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+bgshader textures/inv/inv_widget_middle
+equip dual
+model models/weapon_flamethrower.tik
+move bob
+angledeltas "0 5 0"
+angles "-10 155 0"
+offset "-65 -14 -8"
+hudmove bob
+hudangledeltas "0 2 0"
+//hudangles "0 130 0"
+//hudoffset "-15 -25 0"
+hudangles "0 160 0"
+hudoffset "-55 -10 0"
+selitem_shader textures/inv/inv_widget_middle_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "Soulsucker"
+ammo "Soul"
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+bgshader textures/inv/inv_widget_middle
+equip dual
+model models/weapon_soulsucker.tik
+move bob
+angledeltas "0 5 0"
+angles "-10 150 0"
+offset "-50 0 0"
+hudmove bob
+hudangledeltas "0 10 0"
+hudangles "0 130 0"
+hudoffset "-20 8 0"
+selitem_shader textures/inv/inv_widget_middle_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "Horn_of_Conjuring"
+ammo "HornAmmo"
+barshader textures/hud/in_grad_bottom
+baroffsety -4
+barheight 27
+barwidth 27
+bgshader textures/inv/inv_widget_bottom
+equip dual
+model models/weapon_hornofconjuring.tik
+move bob
+angledeltas "0 5 0"
+angles "20 40 110"
+offset "0 -10 -10"
+hudmove bob
+hudangledeltas "90 0 0"
+
+hudangles "0 0 90"
+hudoffset "0 -10 -5"
+selitem_shader textures/inv/inv_widget_bottom_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+}
+
+typedef health
+{
+button_shader textures/inv/inv_questitems
+hover_shader textures/inv/inv_questitems_selected
+sel_shader textures/inv/inv_questitems_selected_2
+
+width 64
+height 64
+
+item "Health Vial"
+bgshader textures/inv/inv_widget_top
+equip use
+model models/item_healthvial.tik
+move spin
+angledeltas "0 30 0"
+angles "0 180 0"
+offset "5 -4 0"
+hudmove spin
+hudangledeltas "0 30 0"
+hudangles "0 180 0"
+hudoffset "5 0 0"
+selitem_shader textures/inv/inv_widget_top_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "Water Vial"
+bgshader textures/inv/inv_widget_middle
+equip use
+model models/item_watervial.tik
+move spin
+angledeltas "0 30 0"
+angles "0 180 0"
+offset "5 -4 0"
+hudmove spin
+hudangledeltas "0 30 0"
+hudangles "0 180 0"
+hudoffset "5 0 0"
+selitem_shader textures/inv/inv_widget_middle_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+
+item "Circle Of Protection"
+bgshader textures/inv/inv_widget_bottom
+equip use
+model models/item_cop.tik
+move spin
+angledeltas "0 30 0"
+angles "0 180 0"
+offset "5 -4 0"
+hudmove spin
+hudangledeltas "0 30 0"
+hudangles "0 180 0"
+hudoffset "5 0 0"
+selitem_shader textures/inv/inv_widget_bottom_selected
+modelwindow 0.2 0.2 .6 0.6
+selitem_shaderontop
+}
