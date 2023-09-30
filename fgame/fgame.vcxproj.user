@@ -1,4 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommand>D:\fakk_server\fakk2.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>+set dedicated 1 +set sv_maxclients 4 +set developer 1+set logfile 1 +exec server.cfg</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerAttach>true</LocalDebuggerAttach>
+    <LocalDebuggerWorkingDirectory>D:\fakk_server\</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
 </Project>

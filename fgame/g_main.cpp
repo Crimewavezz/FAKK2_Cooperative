@@ -1691,11 +1691,11 @@ void G_ClientUserinfoChanged
 
       player = ( Player * )ent->entity;
 
-      if ( !player )
+      /*if (!player)
          {
          assert( 0 );
          return;
-         }
+         }*/
 
 	   // set name
 	   s = Info_ValueForKey( userinfo, "name" );
